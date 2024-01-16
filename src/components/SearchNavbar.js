@@ -63,7 +63,7 @@ const getContent = (Index) => {
 
   return (
     <>
-<Spacer height="2"></Spacer>
+
 <SearchContainer>
 
     <List>
@@ -90,11 +90,7 @@ const getContent = (Index) => {
 
 const SearchContainer = styled.div`
   width: 80%;
-  // margin: 0px auto;
-
   padding:20px 0px;
-  
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   position: absolute;
   top: 590px;
@@ -109,7 +105,6 @@ const List=styled.div`
 display:flex;
 list-style-type:none;
 justify-content:space-around;
-// border-bottom:2px solid grey;
 
 `
 
@@ -120,7 +115,7 @@ height:40px;
 text-align:center;
 font-size:20px;
 &:hover {
-    color: blue;
+    
     font-weight:bold;
     font-size: 1.1em;
 

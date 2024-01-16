@@ -35,14 +35,15 @@ const Wrapper1=styled.div`
 
 display:flex;
 flex-direction:column;
-width:250px;
-height:350px;
-box-shadow: -12px -8px 40px rgba(70,70,70,0.12) inset;
-gap:10px;
+width:300px;
+height:380px;
+// box-shadow: -12px -8px 40px rgba(70,70,70,0.12) inset;
+box-shadow: inset 0 0 35px 5px rgba(0,0,0,0.25), inset 0 2px 1px 1px rgba(255,255,255,0.9), inset 0 -2px 1px rgba(0,0,0,0.25);
+gap:15px;
 `
 const Image1=styled.img`
-width: 250px;
-height:160px;
+width: 300px;
+height:170px;
 `
 const Image2=styled.img`
 width: 12px;
