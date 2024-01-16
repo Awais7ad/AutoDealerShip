@@ -1,9 +1,30 @@
 import React from 'react'
-import { Row, Col, Container } from 'styled-bootstrap-grid';
+import {Container } from 'styled-bootstrap-grid';
 import Visit from './Visit';
 import { Spacer } from '../shared';
 import styled from 'styled-components';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 const VisitsMap = () => {
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
     const CardDataTest = [{
         image1: './images/Dallas.jpg',
         locationIcon: './images/location-icon.svg',
@@ -63,16 +84,16 @@ const VisitsMap = () => {
 
     }
     ,
-    // {
-    //     image1: './images/Temple.jpg',
-    //     locationIcon: './images/location-icon.svg',
-    //     locationHeading: 'Temple',
-    //     buildingIcon: './images/city-icon.svg',
-    //     buildingHeading: '8 dealer(s)',
-    //     buildingnormalC: 'in this area',
-    //     Visitbutton: 'VISIT US TODAY'
+    {
+        image1: './images/Temple.jpg',
+        locationIcon: './images/location-icon.svg',
+        locationHeading: 'Temple',
+        buildingIcon: './images/city-icon.svg',
+        buildingHeading: '8 dealer(s)',
+        buildingnormalC: 'in this area',
+        Visitbutton: 'VISIT US TODAY'
 
-    // },
+    },
     ]
 
     return (
@@ -80,10 +101,12 @@ const VisitsMap = () => {
             <Wrapper>
                 <h1>We are closer than you think. Visit us!</h1>
             </Wrapper>
-            <Row>
+            <Carousel responsive={responsive}>
+
+          
                 {CardDataTest.map((card, index) => {
                     return (
-                        <Col lg={4} md={6} sm={6} key={index}>
+                    <>
                             <Spacer height="1"></Spacer>
                             <Visit
                                 Picture1={card.image1}
@@ -93,11 +116,14 @@ const VisitsMap = () => {
                                 Content2={card.buildingHeading}
                                 Content3={card.buildingnormalC}
                                 Button={card.Visitbutton}
-                            />
-                        </Col>
+                                />
+                                </>
+                        
                     );
                 })}
-            </Row>
+            
+            </Carousel>
+            <Spacer height="2"></Spacer>
         </Container>
     );
 

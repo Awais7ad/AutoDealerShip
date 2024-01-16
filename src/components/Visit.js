@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import { Spacer } from '../shared'
 
 const Visit = ({Picture1,Picture2,Picture3,Content1,Content2,Content3,Button}) => {
- 
+
   return (
 <>
+
 
 <Spacer height="4"></Spacer>
 <Wrapper1>
@@ -25,6 +26,7 @@ const Visit = ({Picture1,Picture2,Picture3,Content1,Content2,Content3,Button}) =
 <Visitbtn>{Button}</Visitbtn>
 </Cont>
 </Wrapper1>
+
     </>
   )
 }
@@ -35,7 +37,7 @@ display:flex;
 flex-direction:column;
 width:250px;
 height:350px;
-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px;
+box-shadow: -12px -8px 40px rgba(70,70,70,0.12) inset;
 gap:10px;
 `
 const Image1=styled.img`
