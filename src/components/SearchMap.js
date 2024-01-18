@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Search from './Search';
+import { IoSearchSharp } from "react-icons/io5";
 const SearchMap = () => {
     const responsive = {
         superLargeDesktop: {
@@ -108,9 +109,12 @@ const SearchMap = () => {
             <Spacer height="2"></Spacer>
             <AdditionalContent>
                 <h3>Find Your Dream Car!</h3>
-                <input type="search" placeholder='Find it here!'></input>
+                <div style={{display:'flex',justifyContent:'center',gap:'10px'}}>
+                <input type="search" placeholder='Find it here!' style={{height:'40px',width:'300px',border:'thin solid grey',outlineColor:'none'}}></input>
+                <SearchIcon style={{width:'50px',height:'50px',borderRadius:'4px',display:'flex',justifyContent:'center',alignItems:'center'}}><IoSearchSharp /></SearchIcon>
+                </div>
                 <h3>Explore Our Inventory!.</h3>
-               
+                <ExploreButton>Explore</ExploreButton>
             </AdditionalContent>
         </Container>
     
@@ -129,10 +133,25 @@ h3{
 const AdditionalContent = styled.div`
     text-align: center;
     margin-top: 20px;
-
+    
     h3 {
      font-weight:normal;
 
     }
+  
 `;
+
+const ExploreButton=styled.button`
+width:100px;
+height:50px;
+border:none;
+outline-color:none;
+background-color:#FD6A6A;
+border-radius:4px;
+
+`
+const SearchIcon=styled.div`
+background-color:#FD6A6A;
+
+`
 export default SearchMap;
