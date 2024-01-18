@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoMdRefresh } from "react-icons/io";
-import { Spacer } from '../shared';
+
 
 const Search = ({FrontContent, FrontNormalImg,FrontHoverImg,BackContent, BackParagraph}) => {
   const [isFlipped, setFlipped] = useState(false);
@@ -30,6 +30,7 @@ const Search = ({FrontContent, FrontNormalImg,FrontHoverImg,BackContent, BackPar
         </CardBack>
       </CardContainer>
     </>
+
   );
 };
 

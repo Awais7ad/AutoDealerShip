@@ -104,8 +104,16 @@ const SearchMap = () => {
                 })}
 
             </Carousel>
+           
             <Spacer height="2"></Spacer>
+            <AdditionalContent>
+                <h3>Find Your Dream Car!</h3>
+                <input type="search" placeholder='Find it here!'></input>
+                <h3>Explore Our Inventory!.</h3>
+               
+            </AdditionalContent>
         </Container>
+    
     );
 
 
@@ -118,4 +126,13 @@ h3{
 }
 
 `
+const AdditionalContent = styled.div`
+    text-align: center;
+    margin-top: 20px;
+
+    h3 {
+     font-weight:normal;
+
+    }
+`;
 export default SearchMap;
