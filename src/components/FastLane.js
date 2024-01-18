@@ -5,7 +5,7 @@ const FastLane = () => {
   return (
     <>
       <Wrapper>
-        <h1>Speed-up your purchase</h1>
+        <h3>Speed-up your purchase</h3>
         <Wrapper1>
             <img src="./images\ICON 1.png" alt="Error"/>
             <img src="./images\ICON 2.png" alt="Error"/>
@@ -36,7 +36,7 @@ button{
     cursor:pointer;
     outline:none;
    }
-h1{
+h3{
   font-weight: normal;
 }
 `

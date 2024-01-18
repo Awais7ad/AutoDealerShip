@@ -1,35 +1,36 @@
 import React from 'react'
 import { useState } from 'react';
-import { Spacer } from '../shared';
 import styled from 'styled-components';
 import PreApproval from './PreApproval';
 import FastLane from './FastLane';
 import VisitsMap from './VisitsMap';
+import Search from './Search';
+import SearchMap from './SearchMap';
+// import { Container } from 'styled-bootstrap-grid';
+
 const SearchNavbar = () => {
+
     const [tcolor, setTColor] = useState(0);
     const [tborder, setTborder] = useState(0);
 
     const handleButtonClick = (Index) => {
-  
         setTColor(Index);
         setTborder(Index)  
-      
-         
       };
 
-    const gettextColor = (Index) => {
-        return tcolor === Index ?'#FD6A6A':'#000000' ;
-      };
+    // const gettextColor = (Index) => {
+    //     return tcolor === Index ?'#FD6A6A':'#000000' ;
+    //   };
 
-      const gettextBorder = (Index) => {
-        return tborder === Index ?'2px solid #FD6A6A':'none' ;
-      };
+    //   const gettextBorder = (Index) => {
+    //     return tborder === Index ?'2px solid #FD6A6A':'none' ;
+    //   };
 const getContent = (Index) => {
     switch (Index) {
       case 0:
         return (
           <Content>
-            <p>This is the content for Search button.</p>
+            <SearchMap/>
           </Content>
         );
       case 1:
@@ -53,7 +54,7 @@ const getContent = (Index) => {
       default:
         return (
         <Content>
-        <p>This is the content for Search button.</p>
+              <Search/>
         </Content>
 
         )
@@ -66,20 +67,22 @@ const getContent = (Index) => {
 
 <SearchContainer>
 
+
     <List>
-        <ListItem style={{color: gettextColor(0),borderBottom: gettextBorder(0)}} onClick={() =>{
+        <ListItem  tcolor={tcolor}tborder={tborder} index={0} onClick={() =>{
           handleButtonClick(0)
         }}>Search</ListItem>
-        <ListItem style={{color: gettextColor(1),borderBottom: gettextBorder(1)}}onClick={() =>{
+        <ListItem  tcolor={tcolor}tborder={tborder }  index={1} onClick={() =>{
          handleButtonClick(1)
          }}>Pre-Approval</ListItem>
-        <ListItem style={{color: gettextColor(2),borderBottom: gettextBorder(2)}}onClick={() =>{
-         handleButtonClick(2)
+        <ListItem tcolor={tcolor}tborder={tborder }  index={2} onClick={() =>{
+          handleButtonClick(2)
         }}>Fast-Lane</ListItem>
-        <ListItem style={{color: gettextColor(3),borderBottom: gettextBorder(3)}}onClick={() =>{
-         handleButtonClick(3)
-         }}>Visit</ListItem>
+        <ListItem  tcolor={tcolor}tborder={tborder}  index={3} onClick={() =>{
+          handleButtonClick(3)
+        }}>Visit</ListItem>
     </List>
+
     {getContent(tcolor)}
         </SearchContainer>
 
@@ -112,6 +115,8 @@ const ListItem=styled.div`
 width:25%;
 // border:2px solid red;
 height:40px;
+color:${({tcolor ,index})=>tcolor===index || tcolor===index || tcolor===index || tcolor===index ? '#FD6A6A':'#000000'};
+border-bottom:${({tborder ,index})=>tborder===index || tborder===index || tborder===index || tborder===index ? '2px solid #FD6A6A':'none'};
 text-align:center;
 font-size:20px;
 &:hover {

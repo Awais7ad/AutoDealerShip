@@ -99,7 +99,7 @@ const VisitsMap = () => {
     return (
         <Container>
             <Wrapper>
-                <h1>We are closer than you think. Visit us!</h1>
+                <h3>We are closer than you think. Visit us!</h3>
             </Wrapper>
             <Carousel responsive={responsive}>
 
@@ -131,7 +131,7 @@ const VisitsMap = () => {
 }
 const Wrapper = styled.div`
 padding-top:40px;
-h1{
+h3{
     text-align:center;
     font-weight:normal;
 }
