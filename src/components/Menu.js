@@ -51,7 +51,7 @@ height:650px;
 background-image:url('./images/new-hero-md.webp');
 background-repeat:no-repeat;
 background-size:cover;
-background-position:58% 0px;
+background-position:100% 0px;
 width:100%;
 
 `
