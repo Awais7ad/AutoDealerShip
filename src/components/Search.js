@@ -19,14 +19,17 @@ const Search = ({FrontContent, FrontNormalImg,FrontHoverImg,BackContent, BackPar
             <FrontImage src={FrontNormalImg} alt="error" />
             <HoverImage src={FrontHoverImg} alt="error" />
           </FrontImageContainer>
-          <IoMdRefresh onClick={handleFlip} />
+          <div style={{display:'flex',width:'100%',justifyContent:'flex-end'}}>
+          <IoMdRefresh onClick={handleFlip} style={{width:'25px',height:'50px',marginRight:'10px'}}/>
+          </div>
         </CardFront>
         <CardBack>
           <h5>{BackContent}</h5>
-         
-          <p>{BackParagraph}</p>
+          <p style={{fontSize:'15px',display:'flex',justifyContent:'center',width:'90%',alignItems:'center',lineHeight:'25px'}}> {BackParagraph}</p>
           <ExploreButton>Explore</ExploreButton>
-          <IoMdRefresh onClick={handleFlip} />
+          <div style={{display:'flex',width:'100%',justifyContent:'flex-end'}}>
+          <IoMdRefresh onClick={handleFlip} style={{width:'25px',height:'50px',marginRight:'10px'}}/>
+          </div>
         </CardBack>
       </CardContainer>
     </>
@@ -44,11 +47,12 @@ const CardContainer = styled.div`
   cursor: pointer;
   display:flex;
   justify-content:center;
+  align-items:center;
 `;
 
 const CardSide = styled.div`
   width: 250px;
-  height: 300px;
+  height: 280px;
   position: absolute;
   backface-visibility: hidden;
   border-radius: 10px;
@@ -57,7 +61,8 @@ const CardSide = styled.div`
   justify-content:center;
   align-items:center;
   justify-content:space-between;
-  padding-top:20px;
+  padding:10px;
+
 
 `;
 
@@ -92,7 +97,6 @@ const CardFront = styled(CardSide)`
   color: black;
   background-color: #fff; /* Set the default background color */
   transition: background-color 0.3s; /* Add transition for smooth effect */
-
   &:hover {
     background-color: #FD6A6A; /* Set the background color on hover */
     color:white;
@@ -114,8 +118,8 @@ const CardBack = styled(CardSide)`
 
 `;
 const ExploreButton=styled.button`
-width:100px;
-height:50px;
+width:150px;
+height:60px;
 border:none;
 outline-color:none;
 background-color:#FD6A6A;

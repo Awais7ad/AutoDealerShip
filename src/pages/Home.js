@@ -1,20 +1,22 @@
 import React from 'react'
 import Menu from '../components/Menu'
 import SearchNavbar from '../components/SearchNavbar'
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import GetCar from '../components/GetCar'
 import { Spacer } from '../shared'
-// import { Spacer /} from '../shared'
+
 const Home = () => {
   return (
-    <Parent>
-      <Spacer></Spacer>
+    <>
+  
     <Menu/>
     <SearchNavbar/>
-     </Parent>
+  
+    <Spacer height="3"></Spacer>
+    <GetCar/>
+    </>
   )
 }
-const Parent=styled.div`
-  position: relative;
-`
+
 
 export default Home

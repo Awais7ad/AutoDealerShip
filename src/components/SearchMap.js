@@ -109,12 +109,12 @@ const SearchMap = () => {
             <Spacer height="2"></Spacer>
             <AdditionalContent>
                 <h3>Find Your Dream Car!</h3>
-                <div style={{display:'flex',justifyContent:'center',gap:'10px'}}>
-                <input type="search" placeholder='Find it here!' style={{height:'40px',width:'300px',border:'thin solid grey',outlineColor:'none'}}></input>
-                <SearchIcon style={{width:'50px',height:'50px',borderRadius:'4px',display:'flex',justifyContent:'center',alignItems:'center'}}><IoSearchSharp /></SearchIcon>
+                <div style={{display:'flex',gap:'10px'}}>
+                <InputBox type="search" placeholder='Find it here!'></InputBox>
+                <SearchIcon><IoSearchSharp /></SearchIcon>
                 </div>
                 <h3>Explore Our Inventory!.</h3>
-                <ExploreButton>Explore</ExploreButton>
+                <ExploreButton>EXPLORE</ExploreButton>
             </AdditionalContent>
         </Container>
     
@@ -131,9 +131,11 @@ h3{
 
 `
 const AdditionalContent = styled.div`
-    text-align: center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     margin-top: 20px;
-    
+    gap:20px;
     h3 {
      font-weight:normal;
 
@@ -142,16 +144,34 @@ const AdditionalContent = styled.div`
 `;
 
 const ExploreButton=styled.button`
-width:100px;
+width:120px;
 height:50px;
 border:none;
 outline-color:none;
 background-color:#FD6A6A;
-border-radius:4px;
+border-radius:8px;
+color:white;
+font-weight:bold;
 
 `
 const SearchIcon=styled.div`
 background-color:#FD6A6A;
+width:45px;
+height:46px;
+border-radius:8px;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:13px 16px;
+margin:0px 6px;
+color:white;
+`
+const InputBox=styled.input`
 
+height:33px;
+width:241px;
+border:thin solid grey;
+outline-color:none;
+padding:16px 12px;
 `
 export default SearchMap;

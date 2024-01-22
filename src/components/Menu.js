@@ -30,7 +30,7 @@ const Menu = () => {
 
 
 const Paragraph =styled.div`
- height:100vh;
+ height:650px;
 display:flex;
 justify-content:center;
 gap:1rem;
@@ -51,7 +51,7 @@ height:650px;
 background-image:url('./images/new-hero-md.webp');
 background-repeat:no-repeat;
 background-size:cover;
-background-position:100% 0px;
+background-position:73% 0px;
 width:100%;
 
 `
