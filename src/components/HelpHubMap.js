@@ -14,7 +14,7 @@ const HelpHubMap = () => {
     {
         image1: './images/visitus.jpg',
         heading: 'Book it',
-        para: 'Schedule your visit today. It’s fast.',
+        para: 'Schedule your visit today. It’s fast and easy.',
         BtnContent: 'BOOK MY VISIT'
     },
     {
@@ -50,8 +50,6 @@ const HelpHubMap = () => {
                         
                     );
                 })}
-            
-         
                         </Wrapper2>
             <Spacer height="2"></Spacer>
                                 </Wrapper>
@@ -75,7 +73,8 @@ h1{
 const Wrapper=styled.div`
 width:100%;
 height:700px;
-background-color:#F2F2EF;
+background-color:	#e5e5e5;
+
 padding:80px 0px;
 
 `

@@ -8,6 +8,7 @@ import Warranty from '../components/Warranty'
 import Inspection from '../components/Inspection'
 
 import HelpHubMap from '../components/HelpHubMap'
+import Review from '../components/Review'
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
     <Inspection/>
     <Spacer height="3"></Spacer>
     <HelpHubMap/>
+    <Review/>
     </>
   )
 }
