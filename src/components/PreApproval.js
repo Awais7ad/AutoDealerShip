@@ -9,8 +9,8 @@ const PreApproval = () => {
    <img src="./images/prequalify-md.jpg" alt="error" />
    <Wrapper1>
     <h3>
-Pre-approval and get a $500 discount!</h3>
-<p>Receive your pre-approval faster with our online assistance. Complete the request and get closer to the car that you need.</p>
+Pre-approval and get a $500 <br/>discount!</h3>
+<p>Receive your pre-approval faster with our online assistance. Complete the request<br/> and get closer to the car that you need.</p>
 <button style={{color:'white',backgroundColor:'#FD6A6A', fontWeight: 'bold'}}>PRE-APPROVAL</button>
    </Wrapper1>
   </Wrapper>
@@ -25,6 +25,8 @@ padding-bottom:80px;
 display:flex;
 width:100%;
 // height:400px;
+justify-content:center;
+alig-items:center;
 `
 const Wrapper1=styled.div`
 display:flex;

@@ -7,7 +7,7 @@ const GetCar = () => {
     
     <Wrapper>
     <Spacer height="3"></Spacer>
-        <h1>Get a great car with a great financing</h1>    
+        <h1 >Get a great car with a great financing</h1>    
         <p style={{textAlign:'center'}}>At Tricolor Auto we want you to start a new path whenever you want. Drive the car that you want, you only need three documents <br/>to start your financing process:</p>
      
         <Wrapper1 >
@@ -39,7 +39,15 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-gap:30px
+gap:30px;
+
+h1{
+color:#1A1A1A;
+font-size:34px;
+font-family:Montserrat,sains-erif,
+margin:8px 0px 16px;
+padding:0px 0px 8px;
+}
 `
 const Wrapper1=styled.div`
 

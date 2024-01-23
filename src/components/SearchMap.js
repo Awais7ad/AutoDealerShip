@@ -9,23 +9,23 @@ import { IoSearchSharp } from "react-icons/io5";
 const SearchMap = () => {
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
+          breakpoint: { max: 1024, min: 776 },
+          items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
+          breakpoint: { max: 776, min: 375 },
+          items: 1
         }
-    };
+      };
     const CardDataTest = [{
         FrontContent: 'Pickups',
         FrontNormalImg: './images/trucksClose.webp',
@@ -169,7 +169,7 @@ color:white;
 const InputBox=styled.input`
 
 height:33px;
-width:241px;
+width:231px;
 border:thin solid grey;
 outline-color:none;
 padding:16px 12px;
