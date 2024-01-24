@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { SiTrustpilot } from 'react-icons/si';
 import TrustpilotRow from './TrustpilotRow';
+import { FaRegMessage } from "react-icons/fa6";
 
 const Review = () => {
   return (
+    <>
     <Wrapper>
       <Wrapper1>
         <h1>They’re now enjoying their car</h1>
@@ -21,18 +23,6 @@ const Review = () => {
             <span style={{ fontWeight: 'bold' }}>Date of experience</span>: January 22, 2024
           </p>
         </Card>
-
-        <Card>
-          <TrustpilotRow />
-          <h6>Jennifer was so awesome</h6>
-          <TruncatedText>
-            Jennifer was so awesome, she helped me in the best way she could, I was able to drive off in something nice
-          </TruncatedText>
-          <p>
-            <span style={{ fontWeight: 'bold' }}>Date of experience</span>: January 22, 2024
-          </p>
-        </Card>
-   
         <Card>
           <TrustpilotRow />
           <h6>Jennifer was so awesome</h6>
@@ -78,6 +68,23 @@ const Review = () => {
         </p>
       </Wrapper1>
     </Wrapper>
+    <WranntyNote>
+       <p>
+       * The Limited Warranty includes coverage for 18 months or 18,000 miles and is not transferable. 
+       The Limited<br/> Warranty is bundled with the sale of the vehicle, is not priced separately, 
+       and is not a cancellable product within the<br/> amount financed. Covered parts under the Limited Warranty include engine,
+        transmission, drive axle(s), transfer<br/>case, and air conditioning. Seals and gaskets in any system not listed are not covered parts. 
+        All Warranty repairs<br/> require a $99 deductible per visit. Independent third-party providers administer the Tricolor Limited <br/>Warranty.
+       </p>
+    </WranntyNote>
+    <SocialIcon>
+      <div style={{display:'flex',gap:'5px'}}>
+      <FaRegMessage />
+      <h6>Contact Us</h6>
+
+      </div>
+    </SocialIcon>
+    </>
   );
 };
 
@@ -110,7 +117,7 @@ const CenteredDiv = styled.div`
 `;
 
 const Card = styled.div`
-  width: 266px;
+  width: 250px;
   height: 159px;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 50px;
   padding: 10px;
@@ -127,5 +134,21 @@ const TruncatedText = styled.p`
   text-overflow: ellipsis;
   margin: 0;
 `;
+const WranntyNote=styled.div`
+width:100%;
+height:152px;
+background-color:#5C5C5C;
+// display:flex;
+// justify-content:center;
+// align-items:center;
+text-align:center;
+padding:15px 0px;
+color:white;
+font-size:13px;
+`
+const SocialIcon=styled.div`
+background-color:#6c767e;
+color:white;
 
+`
 export default Review;
