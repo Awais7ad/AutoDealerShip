@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { SiTrustpilot } from 'react-icons/si';
 import TrustpilotRow from './TrustpilotRow';
 import { FaRegMessage } from "react-icons/fa6";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaQuestion } from "react-icons/fa6";
 
 const Review = () => {
   return (
@@ -78,15 +80,24 @@ const Review = () => {
        </p>
     </WranntyNote>
     <SocialIcon>
-      <div style={{display:'flex',gap:'5px'}}>
+      <SocialIconWrap>
       <FaRegMessage />
-      <h6>Contact Us</h6>
-
-      </div>
+      <h6 style={{margin:'0px 0px 0px 8px'}}>Contact Us</h6>
+      </SocialIconWrap>
+      <SocialIconWrap>
+      <FaQuestion  />
+      <h6 style={{margin:'0px 0px 0px 8px'}}>FAQS</h6>
+      </SocialIconWrap>
+      <SocialIconWrap>
+      <BsWhatsapp />
+      <h6 style={{margin:'0px 0px 0px 8px'}}>WhatsApp</h6>
+      </SocialIconWrap>
     </SocialIcon>
     </>
   );
 };
+
+
 
 const Wrapper = styled.div`
   background-color: #f9f9f9;
@@ -149,6 +160,20 @@ font-size:13px;
 const SocialIcon=styled.div`
 background-color:#6c767e;
 color:white;
+height:70px;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:16px 0px;
+gap:100px;
+
+`
+const SocialIconWrap=styled.div`
+
+display:flex;
+  justify-content: center;
+  align-items: center;
 
 `
 export default Review;

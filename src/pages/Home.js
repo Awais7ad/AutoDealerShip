@@ -9,11 +9,14 @@ import Inspection from '../components/Inspection'
 
 import HelpHubMap from '../components/HelpHubMap'
 import Review from '../components/Review'
+import Navbar from '../components/NavBar'
+// import SimpleHeader from '../components/SimpleHeader'
 
 const Home = () => {
   return (
     <>
-  
+     <Navbar/>
+    
     <Menu/>
     <SearchNavbar/>
   

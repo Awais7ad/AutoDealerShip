@@ -109,7 +109,7 @@ const SearchMap = () => {
             <Spacer height="2"></Spacer>
             <AdditionalContent>
                 <h3>Find Your Dream Car!</h3>
-                <div style={{display:'flex',gap:'10px'}}>
+                <div style={{display:'flex',gap:'10px',alignItems:'center'}}>
                 <InputBox type="search" placeholder='Find it here!'></InputBox>
                 <SearchIcon><IoSearchSharp /></SearchIcon>
                 </div>
@@ -173,5 +173,6 @@ width:231px;
 border:thin solid grey;
 outline-color:none;
 padding:16px 12px;
+
 `
 export default SearchMap;
